@@ -1856,9 +1856,16 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    console.log("Mounted");
+    console.log(this.$refs.imageUpload);
     this.dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0___default.a(this.$refs.imageUpload, {
       url: '/api/images'
     });
+  },
+  methods: {
+    printRef: function printRef(e) {
+      console.log(this.$refs.imageUpload);
+    }
   }
 });
 

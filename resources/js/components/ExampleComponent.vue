@@ -17,9 +17,16 @@
             }
         },
         mounted() {
+            console.log("Mounted");
+            console.log(this.$refs.imageUpload);
             this.dropzone = new Dropzone(this.$refs.imageUpload,{
                 url: '/api/images'
             });
+        },
+        methods:{
+            printRef: function(e){
+                console.log(this.$refs.imageUpload);
+            }
         }
     }
 </script>

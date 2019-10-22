@@ -19,3 +19,6 @@ Route::get('/','UploadsController@index');
 
 Route::delete('/images/{imageUpload}', 'UploadsController@destroy');
 
+Route::get('multiple','FormController@create');
+
+Route::post('multiple','FormController@store')->name('Hello');

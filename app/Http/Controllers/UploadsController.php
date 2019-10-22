@@ -26,7 +26,7 @@ class UploadsController extends Controller
 
 
         $images = Collection::wrap(request()->file('file'));
-
+        dd($images);
         $images->each(function ($image) {
             $basename = Str::random();
             $original = $basename . '.' . $image->getClientOriginalExtension();
